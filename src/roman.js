@@ -14,13 +14,10 @@ function toRoman(n) {
   } else if (n > 3999) {
     throw new RangeError('Input value must be less than 3999');
   }
-  if (n === 4) {
-    return 'IV';
-  } else if (n === 9) {
-    return 'IX';
-  } else {
-    return 'I'.repeat(n);
-  }
+  const soustraction = {4: 'IV', 9: 'IX'};
+  if (soustraction[n]) return soustraction[n];
+
+  return 'I'.repeat(n);
 }
 
 module.exports = {toRoman};
