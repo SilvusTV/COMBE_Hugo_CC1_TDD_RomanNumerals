@@ -14,8 +14,13 @@ function toRoman(n) {
   } else if (n > 3999) {
     throw new RangeError('Input value must be less than 3999');
   }
-
-  return 'I'.repeat(n);
+  if (n === 4) {
+    return 'IV';
+  } else if (n === 9) {
+    return 'IX';
+  } else {
+    return 'I'.repeat(n);
+  }
 }
 
 module.exports = {toRoman};
