@@ -9,8 +9,18 @@
  * @returns {string}
  */
 function toRoman(n) {
-  // TDD: commencer par écrire les tests, cette implémentation est volontairement non faite.
-  throw new Error('Not implemented yet');
+  if (n < 1 ) {
+    throw new RangeError('Input value must be greater than 1');
+  }else if (n > 3999) {
+    throw new RangeError('Input value must be less than 3999');
+  }
+  if (n === 1) {
+    return 'I';
+  }else if (n === 2) {
+    return 'II';
+  }else if (n === 3) {
+    return 'III';
+  }
 }
 
 module.exports = { toRoman };
