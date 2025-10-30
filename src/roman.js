@@ -9,11 +9,10 @@
  * @returns {string}
  */
 function toRoman(n) {
-  if (n < 1) {
-    throw new RangeError('Input value must be greater than 1');
-  } else if (n > 3999) {
-    throw new RangeError('Input value must be less than 3999');
+  if (n < 1 || n > 3999) {
+    throw new RangeError('Input value must be between 1 and 3999');
   }
+
   const soustraction = {4: 'IV', 9: 'IX'};
   if (soustraction[n]) return soustraction[n];
 

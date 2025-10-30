@@ -14,10 +14,10 @@ describe('Roman numerals - Red 1', () => {
     expect(toRoman(3)).toBe('III');
   });
   test('should throw if input value is not greater than 1', () => {
-    expect(() => toRoman(0)).toThrow('Input value must be greater than 1');
+    expect(() => toRoman(0)).toThrow('Input value must be between 1 and 3999');
   })
   test('should throw if input value is not less than 3999',()=>{
-    expect(() => toRoman(4000)).toThrow('Input value must be less than 3999')
+    expect(() => toRoman(4000)).toThrow('Input value must be between 1 and 3999')
   })
 
   //Red 2
